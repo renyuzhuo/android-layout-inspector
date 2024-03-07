@@ -17,6 +17,7 @@ version = properties("pluginVersion")
 // Configure project's dependencies
 repositories {
     mavenCentral()
+    google()
 }
 
 intellij {
@@ -30,22 +31,19 @@ intellij {
 
 dependencies {
     implementation(platform("io.projectreactor:reactor-bom:2020.0.20"))
-    implementation("io.rsocket:rsocket-core:1.1.3")
-    implementation("io.rsocket:rsocket-transport-netty:1.1.3")
+    implementation("io.rsocket:rsocket-core:1.1.4")
+    implementation("io.rsocket:rsocket-transport-netty:1.1.4")
     implementation("io.rsocket.broker:rsocket-broker-frames:0.3.0")
 
-
-    implementation("org.jooq:joor-java-8:0.9.7")
+    implementation("org.jooq:joor-java-8:0.9.15")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("com.google.code.gson:gson:2.8.9")
+    implementation("com.google.code.gson:gson:2.10.1")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing:1.3.2")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing:1.7.3")
+    implementation("com.android.tools.ddms:ddmlib:31.4.0-alpha12")
+    implementation("com.android.tools:common:31.4.0-alpha12")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
-
-
-    testImplementation("junit:junit:4.12")
+    testImplementation("junit:junit:4.13.2")
 }
 
 
